@@ -12,9 +12,7 @@ const Chat = require('./models/Chat');
 const Message = require('./models/Message');
 
 const app = express();
-app.use(cors({
-  origin: '*', // For production: replace '*' with your frontend URL
-}));
+app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 // --- MongoDB Connection ---
@@ -41,7 +39,6 @@ app.post('/api/register', async (req, res) => {
     const exists = await User.findOne({ username });
     if (exists) return res.status(400).json({ error: 'Username taken' });
 
-    // Note: store hashed password in production
     const user = new User({ username, name, passwordHash: password });
     await user.save();
 
@@ -93,13 +90,10 @@ app.get('/api/chats/:chatId/messages', async (req, res) => {
 // --- HTTP + Socket.IO ---
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: {
-    origin: '*', // For production: use your frontend domain
-    methods: ['GET', 'POST'],
-  },
+  cors: { origin: '*', methods: ['GET', 'POST'] },
 });
 
-// --- Socket Authentication ---
+// --- Socket Auth ---
 io.use((socket, next) => {
   try {
     const token = socket.handshake.auth.token;
@@ -136,6 +130,5 @@ io.on('connection', (socket) => {
   });
 });
 
-// --- Start server ---
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
