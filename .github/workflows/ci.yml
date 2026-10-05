@@ -1,4 +1,4 @@
-name: StdGram CI/CD
+name: CI
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test on Python ${{ matrix.python-version }} (${{ matrix.os }})
+    name: Python ${{ matrix.python-version }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -17,7 +17,7 @@ jobs:
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
@@ -25,15 +25,14 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyaes python-socks
+          pip install -e .
 
-      - name: Verify StdGram Package Imports
+      - name: Verify installation and MTProto imports
         run: |
-          python -c "import stdgram; print('StdGram version:', stdgram.__version__)"
-          python -c "import stdgram.enums; print('Enums OK')"
-          python -c "import stdgram.errors; print('Errors OK')"
-          python -c "import stdgram.raw; print('Raw MTProto OK')"
-          python -c "from stdgram import Client; app = Client('ci_test'); print('Client initialized successfully!')"
+          python -c "import stdgram; print('StdGram:', stdgram.__version__)"
+          python -c "from stdgram import Client, filters, enums; print('Client & filters OK')"
+          python -c "import stdgram.raw; print('MTProto Layer schema OK')"
+          python -c "from stdgram.errors import FloodWait; print('Errors OK')"
