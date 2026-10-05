@@ -1,0 +1,47 @@
+# StdGram Legal Notice & Mandatory Attribution Terms
+# Under GNU General Public License v3.0, Section 7 (Additional Terms)
+
+Copyright (C) 2026 STD-DEEPANSHU <stddeepanshu@aol.com> and StdGram Contributors.
+All rights reserved.
+
+===============================================================================
+1. UPSTREAM ATTRIBUTION & ACKNOWLEDGEMENTS
+===============================================================================
+StdGram is a next-generation MTProto framework for Python built with deep respect
+and appreciation for foundational open-source engineering in the Telegram ecosystem:
+  - Pyrogram: Originally authored by Dan (https://github.com/pyrogram/pyrogram)
+  - Kurigram: Authored by kurigram-org (https://github.com/kurigram-org/kurigram)
+  - Telethon: Authored by Lonami (https://github.com/LonamiWebs/Telethon)
+  - TgCrypto: Fast MTProto cryptographic engine by Pyrogram / Dan
+
+All respective upstream copyrights and contributions are preserved in full faith.
+
+===============================================================================
+2. SECTION 7 ADDITIONAL TERMS: MANDATORY PROMINENT ATTRIBUTION
+===============================================================================
+Pursuant to Section 7(b) and 7(c) of the GNU General Public License version 3:
+
+1. PRESERVATION OF NOTICES & PROMINENT ATTRIBUTION:
+   Any redistribution, modification, fork, or derivative work of StdGram
+   MUST prominently preserve:
+   (a) The project name "StdGram" and primary author attribution to "STD-DEEPANSHU".
+   (b) A visible link to the official repository (https://github.com/STD-DEEPANSHU/StdGram).
+   (c) The prominent credit must be clearly visible in:
+       - The primary README.md file of any derived work (within the top section).
+       - Any interactive terminal startup banner, GUI header, or client logs.
+       - Publicly accessible documentation and promotional materials.
+
+2. PROHIBITION OF CLOSED-SOURCE OR PROPRIETARY DISTRIBUTION:
+   StdGram is strictly copyleft under GNU GPLv3.
+   No individual, group, or organization is authorized to make StdGram or any
+   derivative work closed-source, obfuscated, or proprietary. Any work containing
+   or derived from StdGram MUST be made fully and publicly available under the
+   terms of the GNU General Public License v3.0.
+
+3. PROHIBITION OF MISREPRESENTATION:
+   You may NOT misrepresent the origin of this material. Modified versions must
+   be clearly marked as such, and must not claim sole originality for features
+   engineered by STD-DEEPANSHU or upstream contributors.
+
+Failure to abide by these terms constitutes automatic termination of the license
+and copyright infringement under applicable international intellectual property laws.
