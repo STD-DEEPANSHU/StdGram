@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stdgram"
+version = "1.0.0.dev1"
+description = "The Next-Generation, Production-Ready MTProto Framework for Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-only" }
+authors = [
+    { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
+]
+maintainers = [
+    { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
+]
+keywords = [
+    "telegram",
+    "mtproto",
+    "pyrogram",
+    "kurigram",
+    "stdgram",
+    "telegram-bot",
+    "userbot",
+    "asyncio"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "pyaes>=1.6.1",
+    "tgcrypto>=1.2.5; platform_system != 'Windows' or python_version < '3.13'"
+]
+
+[project.optional-dependencies]
+all = [
+    "motor>=3.3.0",
+    "redis>=5.0.0",
+    "asyncpg>=0.29.0",
+    "aiofiles>=23.2.0"
+]
+mongo = ["motor>=3.3.0"]
+redis = ["redis>=5.0.0"]
+postgres = ["asyncpg>=0.29.0"]
+
+[project.urls]
+Homepage = "https://github.com/STD-DEEPANSHU/StdGram"
+Repository = "https://github.com/STD-DEEPANSHU/StdGram"
+"Bug Tracker" = "https://github.com/STD-DEEPANSHU/StdGram/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stdgram*"]
