@@ -1,2 +1,0 @@
-# Architecture
-Modular service pipeline.
