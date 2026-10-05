@@ -7,7 +7,7 @@ Licensed under GNU General Public License v3.0 (GPLv3).
 import asyncio
 import logging
 from typing import Callable, Any, Coroutine, Optional
-from stdgram.errors.exceptions import FloodWait
+from stdgram.errors import FloodWait
 
 logger = logging.getLogger("stdgram.floodwait")
 

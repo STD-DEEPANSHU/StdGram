@@ -1,1 +1,2 @@
 pyaes>=1.6.1
+python-socks[asyncio]>=2.4.3

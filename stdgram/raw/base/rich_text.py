@@ -1,0 +1,88 @@
+#  StdGram - Telegram MTProto API Client Library for Python
+#
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#  Copyright (C) 2024-present KurimuzonAkuma <https://github.com/KurimuzonAkuma>
+#
+#  This file is part of StdGram.
+#
+#  StdGram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  StdGram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with StdGram. If not, see <https://www.gnu.org/licenses/>.
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+from typing import TYPE_CHECKING
+
+from stdgram import raw
+from stdgram.raw.core import BaseTypeMeta
+
+
+if TYPE_CHECKING:
+    RichText = raw.types.TextAnchor | raw.types.TextAutoEmail | raw.types.TextAutoPhone | raw.types.TextAutoUrl | raw.types.TextBankCard | raw.types.TextBold | raw.types.TextBotCommand | raw.types.TextButton | raw.types.TextCashtag | raw.types.TextConcat | raw.types.TextCustomEmoji | raw.types.TextDate | raw.types.TextDiff | raw.types.TextEmail | raw.types.TextEmpty | raw.types.TextFixed | raw.types.TextHashtag | raw.types.TextImage | raw.types.TextItalic | raw.types.TextMarked | raw.types.TextMath | raw.types.TextMention | raw.types.TextMentionName | raw.types.TextPhone | raw.types.TextPlain | raw.types.TextSpoiler | raw.types.TextStrike | raw.types.TextSubscript | raw.types.TextSuperscript | raw.types.TextUnderline | raw.types.TextUrl
+else:
+    # noinspection PyRedeclaration
+    class RichText(metaclass=BaseTypeMeta):  # type: ignore
+        """Telegram API base type.
+
+    Constructors:
+        This base type has 31 constructors available.
+
+        .. currentmodule:: stdgram.raw.types
+
+        .. autosummary::
+            :nosignatures:
+
+            TextAnchor
+            TextAutoEmail
+            TextAutoPhone
+            TextAutoUrl
+            TextBankCard
+            TextBold
+            TextBotCommand
+            TextButton
+            TextCashtag
+            TextConcat
+            TextCustomEmoji
+            TextDate
+            TextDiff
+            TextEmail
+            TextEmpty
+            TextFixed
+            TextHashtag
+            TextImage
+            TextItalic
+            TextMarked
+            TextMath
+            TextMention
+            TextMentionName
+            TextPhone
+            TextPlain
+            TextSpoiler
+            TextStrike
+            TextSubscript
+            TextSuperscript
+            TextUnderline
+            TextUrl
+        """
+
+        QUALNAME = "stdgram.raw.base.RichText"
+        __union_types__ = raw.types.TextAnchor | raw.types.TextAutoEmail | raw.types.TextAutoPhone | raw.types.TextAutoUrl | raw.types.TextBankCard | raw.types.TextBold | raw.types.TextBotCommand | raw.types.TextButton | raw.types.TextCashtag | raw.types.TextConcat | raw.types.TextCustomEmoji | raw.types.TextDate | raw.types.TextDiff | raw.types.TextEmail | raw.types.TextEmpty | raw.types.TextFixed | raw.types.TextHashtag | raw.types.TextImage | raw.types.TextItalic | raw.types.TextMarked | raw.types.TextMath | raw.types.TextMention | raw.types.TextMentionName | raw.types.TextPhone | raw.types.TextPlain | raw.types.TextSpoiler | raw.types.TextStrike | raw.types.TextSubscript | raw.types.TextSuperscript | raw.types.TextUnderline | raw.types.TextUrl
+
+        def __init__(self):
+            raise TypeError("Base types can only be used for type checking purposes: "
+                            "you tried to use a base type instance as argument, "
+                            "but you need to instantiate one of its constructors instead. "
+                            "More info: https://docs.kurigram.icu/telegram/base/rich-text")

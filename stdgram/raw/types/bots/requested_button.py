@@ -1,0 +1,87 @@
+#  StdGram - Telegram MTProto API Client Library for Python
+#
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#  Copyright (C) 2024-present KurimuzonAkuma <https://github.com/KurimuzonAkuma>
+#
+#  This file is part of StdGram.
+#
+#  StdGram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  StdGram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with StdGram. If not, see <https://www.gnu.org/licenses/>.
+
+from __future__ import annotations as _annotations
+
+from io import BytesIO
+from typing import TYPE_CHECKING, Any
+
+from stdgram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
+from stdgram.raw.core import TLObject
+
+if TYPE_CHECKING:
+    from stdgram import raw
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+
+class RequestedButton(TLObject):
+    """Telegram API type.
+
+    Constructor of :obj:`~stdgram.raw.base.bots.RequestedButton`.
+
+    Details:
+        - Layer: ``229``
+        - ID: ``F13BBCD7``
+
+    Parameters:
+        webapp_req_id (``str``):
+            N/A
+
+    Functions:
+        This object can be returned by 1 function.
+
+        .. currentmodule:: stdgram.raw.functions
+
+        .. autosummary::
+            :nosignatures:
+
+            bots.RequestWebViewButton
+    """
+
+    __slots__: list[str] = ["webapp_req_id"]
+
+    ID = 0xf13bbcd7
+    QUALNAME = "types.bots.RequestedButton"
+
+    def __init__(self, *, webapp_req_id: str) -> None:
+        self.webapp_req_id = webapp_req_id  # string
+
+    @staticmethod
+    def read(b: BytesIO, *args: Any) -> RequestedButton:
+        # No flags
+        
+        webapp_req_id = String.read(b)
+        
+        return RequestedButton(webapp_req_id=webapp_req_id)
+
+    def write(self, *args) -> bytes:
+        b = BytesIO()
+        b.write(Int(self.ID, False))
+
+        # No flags
+        
+        b.write(String(self.webapp_req_id))
+        
+        return b.getvalue()

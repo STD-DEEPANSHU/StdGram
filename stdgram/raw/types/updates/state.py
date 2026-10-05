@@ -1,0 +1,119 @@
+#  StdGram - Telegram MTProto API Client Library for Python
+#
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#  Copyright (C) 2024-present KurimuzonAkuma <https://github.com/KurimuzonAkuma>
+#
+#  This file is part of StdGram.
+#
+#  StdGram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  StdGram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with StdGram. If not, see <https://www.gnu.org/licenses/>.
+
+from __future__ import annotations as _annotations
+
+from io import BytesIO
+from typing import TYPE_CHECKING, Any
+
+from stdgram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
+from stdgram.raw.core import TLObject
+
+if TYPE_CHECKING:
+    from stdgram import raw
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+
+class State(TLObject):
+    """Telegram API type.
+
+    Constructor of :obj:`~stdgram.raw.base.updates.State`.
+
+    Details:
+        - Layer: ``229``
+        - ID: ``A56C2A3E``
+
+    Parameters:
+        pts (``int`` ``32-bit``):
+            N/A
+
+        qts (``int`` ``32-bit``):
+            N/A
+
+        date (``int`` ``32-bit``):
+            N/A
+
+        seq (``int`` ``32-bit``):
+            N/A
+
+        unread_count (``int`` ``32-bit``):
+            N/A
+
+    Functions:
+        This object can be returned by 1 function.
+
+        .. currentmodule:: stdgram.raw.functions
+
+        .. autosummary::
+            :nosignatures:
+
+            updates.GetState
+    """
+
+    __slots__: list[str] = ["pts", "qts", "date", "seq", "unread_count"]
+
+    ID = 0xa56c2a3e
+    QUALNAME = "types.updates.State"
+
+    def __init__(self, *, pts: int, qts: int, date: int, seq: int, unread_count: int) -> None:
+        self.pts = pts  # int
+        self.qts = qts  # int
+        self.date = date  # int
+        self.seq = seq  # int
+        self.unread_count = unread_count  # int
+
+    @staticmethod
+    def read(b: BytesIO, *args: Any) -> State:
+        # No flags
+        
+        pts = Int.read(b)
+        
+        qts = Int.read(b)
+        
+        date = Int.read(b)
+        
+        seq = Int.read(b)
+        
+        unread_count = Int.read(b)
+        
+        return State(pts=pts, qts=qts, date=date, seq=seq, unread_count=unread_count)
+
+    def write(self, *args) -> bytes:
+        b = BytesIO()
+        b.write(Int(self.ID, False))
+
+        # No flags
+        
+        b.write(Int(self.pts))
+        
+        b.write(Int(self.qts))
+        
+        b.write(Int(self.date))
+        
+        b.write(Int(self.seq))
+        
+        b.write(Int(self.unread_count))
+        
+        return b.getvalue()

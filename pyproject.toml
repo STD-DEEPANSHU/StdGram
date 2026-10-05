@@ -41,6 +41,7 @@ classifiers = [
 ]
 dependencies = [
     "pyaes>=1.6.1",
+    "python-socks[asyncio]>=2.4.3",
     "tgcrypto>=1.2.5; platform_system != 'Windows' or python_version < '3.13'"
 ]
 

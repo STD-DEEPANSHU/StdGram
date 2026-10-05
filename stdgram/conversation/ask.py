@@ -6,7 +6,7 @@ Licensed under GNU General Public License v3.0 (GPLv3).
 
 import asyncio
 from typing import Dict, Tuple, Optional, Any, Callable
-from stdgram.errors.exceptions import ConversationTimeout
+from stdgram.errors import ConversationTimeout
 
 class ConversationManager:
     """
