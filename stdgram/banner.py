@@ -13,7 +13,7 @@ BANNER_TEXT = r"""
   ___) | |_| (_| | |_| | | | (_| | | | | | |
  |____/ \__|\__,_|\____|_|  \__,_|_| |_| |_|
 =====================================================
-⚡ StdGram v1.0.0.dev1 — Next-Gen MTProto Framework
+⚡ StdGram v1.0.0 — Next-Gen MTProto Framework
 👤 Lead Architect: STD-DEEPANSHU
 📜 License: GNU General Public License v3.0 (GPLv3)
 🌐 GitHub: https://github.com/STD-DEEPANSHU/StdGram

@@ -2,7 +2,7 @@
 #  Copyright (C) 2026 STD-DEEPANSHU <stddeepanshu@aol.com>
 #  Licensed under GNU General Public License v3.0 (GPLv3).
 
-__version__ = "1.0.0.dev1"
+__version__ = "1.0.0"
 __license__ = "GNU General Public License v3.0 (GPLv3)"
 __copyright__ = "Copyright (C) 2026 STD-DEEPANSHU <stddeepanshu@aol.com>"
 __author__ = "STD-DEEPANSHU"
