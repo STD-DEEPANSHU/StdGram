@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stdgram"
-version = "1.0.0"
+version = "1.0.1"
 description = "The Next-Generation, Production-Ready MTProto Framework for Python"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -64,3 +64,6 @@ Repository = "https://github.com/STD-DEEPANSHU/StdGram"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["stdgram*"]
+
+[tool.setuptools.package-data]
+stdgram = ["*.txt", "*.json", "*.html"]

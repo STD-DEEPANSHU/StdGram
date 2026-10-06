@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include NOTICE
+include requirements.txt
+include stdgram/mime_types.txt
+recursive-include stdgram *.txt *.json *.html
